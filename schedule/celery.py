@@ -18,7 +18,7 @@ except Exception as ex:
         "couldn't import env file.Error:"+str(ex)
     )
 
-app.conf.BROKER_URL = os.getenv("BROKER_URL")
+app.conf.BROKER_URL = os.getenv("broker_url")
 app.conf.result_backend = os.getenv("result_backend")
 app.conf.accept_content = os.getenv("accept_content").split(",")
 app.conf.task_serializer = os.getenv("task_serializer")
